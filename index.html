@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Simple Card</title>
@@ -7,107 +8,108 @@
 </head>
 <style>
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f4f6f8;
-}
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f4f6f8;
+    }
 
-.card {
-    width: 320px;
-    background: #fff;
-    border-radius: 18px;
-    border: 10px solid #d0d6dd;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
+    .card {
+        width: 320px;
+        background: #fff;
+        border-radius: 18px;
+        border: 10px solid #d0d6dd;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-.card-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
+    .card-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
 
-.card-content {
-    padding: 18px;
-}
+    .card-content {
+        padding: 18px;
+    }
 
-.tags {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
-}
+    .tags {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
 
-.tags span {
-    font-size: 12px;
-    padding: 4px 10px;
-    border-radius: 12px;
-    background: #eef2f7;
-    color: #555;
-}
+    .tags span {
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 12px;
+        background: #eef2f7;
+        color: #555;
+    }
 
-.card-content h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #111;
-}
+    .card-content h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #111;
+    }
 
-.card-content p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 16px;
-}
+    .card-content p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
 
-.card-content button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    background: #dbeafe;
-    color: #2563eb;
-    font-size: 14px;
-    cursor: pointer;
-}
+    .card-content button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background: #dbeafe;
+        color: #2563eb;
+        font-size: 14px;
+        cursor: pointer;
+    }
 
-.card-content button:hover {
-    background: #bfdbfe;
-}
-
+    .card-content button:hover {
+        background: #bfdbfe;
+    }
 </style>
+
 <body>
 
-<div class="card">
-    <div class="card-image">
-        <img src="/card.jpeg" alt="Lago di Braies">
-    </div>
-
-    <div class="card-content">
-        <div class="tags">
-            <span>Gaining</span>
-            <span>love</span>
+    <div class="card">
+        <div class="card-image">
+            <img src="/card.jpeg" alt="Lago di Braies">
         </div>
 
-        <h2>Raj Mund</h2>
+        <div class="card-content">
+            <div class="tags">
+                <span>Gaining</span>
+                <span>love</span>
+            </div>
 
-      <p>
-    I stood there without rushing, watching the water hold the sky so gently. 
-    In that quiet moment, nothing needed fixing, proving, or becoming — 
-    it was enough to simply exist and feel present.
-</p>
+            <h2>Raj Mund</h2>
+
+            <p>
+                I stood there without rushing, watching the water hold the sky so gently.
+                In that quiet moment, nothing needed fixing, proving, or becoming —
+                it was enough to simply exist and feel present.
+            </p>
 
 
-        <button>Read More</button>
+            <button>Read More</button>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>
