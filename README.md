@@ -8,7 +8,7 @@ This project focuses on clean layout, soft colors, and a calm visual feel, makin
 - Responsive layout using Flexbox
 - Rounded corners and subtle shadows
 - Tag-style labels and call-to-action button
-- Clean typography and spacing
+- Clean typography and spacing optimize 
 
 ## 🛠️ Technologies Used
 - HTML5
