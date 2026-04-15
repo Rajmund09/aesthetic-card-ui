@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Simple Card</title>
+    <title>Advanced Aesthetic Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
@@ -29,12 +29,23 @@
         border: 10px solid #d0d6dd;
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transitions for smooth hover */
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* Slight scale on hover */
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
     }
 
     .card-image img {
         width: 100%;
         height: 200px;
         object-fit: cover;
+        transition: transform 0.3s ease; /* Added for image zoom */
+    }
+
+    .card-image:hover img {
+        transform: scale(1.1); /* Zoom effect on image hover */
     }
 
     .card-content {
@@ -53,6 +64,11 @@
         border-radius: 12px;
         background: #eef2f7;
         color: #555;
+        transition: background 0.3s ease; /* Smooth color change */
+    }
+
+    .tags span:hover {
+        background: #dbeafe; /* Highlight on hover */
     }
 
     .card-content h2 {
@@ -66,6 +82,13 @@
         color: #666;
         line-height: 1.5;
         margin-bottom: 16px;
+        transition: max-height 0.5s ease; /* For expanding content */
+        overflow: hidden;
+        max-height: 4.5em; /* Limit initial height */
+    }
+
+    .card-content p.expanded {
+        max-height: none; /* Expand when toggled */
     }
 
     .card-content button {
@@ -77,10 +100,12 @@
         color: #2563eb;
         font-size: 14px;
         cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease; /* Smooth button interactions */
     }
 
     .card-content button:hover {
         background: #bfdbfe;
+        transform: translateY(-2px); /* Slight lift on hover */
     }
 </style>
 
@@ -98,16 +123,34 @@
 
             <h2>Raj Mund</h2>
 
-            <p>
+            <p id="card-text">
                 I stood there without rushing, watching the water hold the sky so gently.
                 In that quiet moment, nothing needed fixing, proving, or becoming —
                 it was enough to simply exist and feel present.
+                <span class="extra-content" style="display: none;"> This is additional hidden content that expands on the theme, adding depth to the card's narrative.</span>
             </p>
 
-            <button>Read More</button>
+            <button id="read-more-btn">Read More</button>
         </div>
     </div>
 
+    <script>
+        const button = document.getElementById('read-more-btn');
+        const text = document.getElementById('card-text');
+        const extra = document.querySelector('.extra-content');
+
+        button.addEventListener('click', () => {
+            if (extra.style.display === 'none') {
+                extra.style.display = 'inline';
+                text.classList.add('expanded');
+                button.textContent = 'Read Less';
+            } else {
+                extra.style.display = 'none';
+                text.classList.remove('expanded');
+                button.textContent = 'Read More';
+            }
+        });
+    </script>
 </body>
 
 </html>
